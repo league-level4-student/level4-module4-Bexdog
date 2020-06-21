@@ -1,8 +1,9 @@
 package _03_polymorphs;
+
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class MovingMorph extends Polymorph{
+public class ClickPolymorph extends Polymorph{
 	private static int width = 50;
 	private static int height = 50;
 	int getWidth() {
@@ -17,16 +18,16 @@ public class MovingMorph extends Polymorph{
 	void setHeight(int i) {
 		height = i;
 	}
-		MovingMorph(int x, int y) {
-			super(x, y);
-		}
-		public void update() {
-			this.setX(getX()-1);
-			this.setY(getY()+1);
-		}
-		@Override
-		public void draw(Graphics g) {
-			g.setColor(Color.black);
-			g.fillRect(getX(), getY(), width, height);
-		}
+	protected ClickPolymorph(int x, int y) {
+		super(x, y);
+		// TODO Auto-generated constructor stub
+	}
+	public void update() {
+		
+	}
+	@Override
+	public void draw(Graphics g) {
+		g.setColor(Color.red);
+		g.fillRect(getX(),getY(),width,height);
+	}
 }

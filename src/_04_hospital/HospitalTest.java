@@ -32,7 +32,7 @@ public class HospitalTest extends TestCase {
 		testHospital.addPatient(new Patient());
 		assertEquals(3, testHospital.getPatients().size());
 	}
-
+//done up to here
 	/* Fix asserts one at a time */
 	public void testDoctorsHaveSpecialties() throws Exception {
 		Doctor testDoctor = new Doctor();

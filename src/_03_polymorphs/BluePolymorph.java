@@ -4,8 +4,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class BluePolymorph extends Polymorph{
-private static int width = 0;
-private static int height = 0;
+private static int width = 50;
+private static int height = 50;
 int getWidth() {
 	return width;
 }

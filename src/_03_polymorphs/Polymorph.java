@@ -2,9 +2,9 @@ package _03_polymorphs;
 
 import java.awt.Graphics;
 
-public abstract class Polymorph {
-   private static int x;
-   private static int y;
+public abstract class Polymorph{
+   private int x;
+   private int y;
     int getX() {
     	return x;
     }
@@ -22,9 +22,9 @@ public abstract class Polymorph {
    	 this.y = y;
     }
     
-    public abstract void update();
-   	 
-    
-    
+    public void update() {
+    	
+    }
+   	
     public abstract void draw(Graphics g);
 }
