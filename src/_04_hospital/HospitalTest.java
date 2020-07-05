@@ -32,7 +32,6 @@ public class HospitalTest extends TestCase {
 		testHospital.addPatient(new Patient());
 		assertEquals(3, testHospital.getPatients().size());
 	}
-//done up to here
 	/* Fix asserts one at a time */
 	public void testDoctorsHaveSpecialties() throws Exception {
 		Doctor testDoctor = new Doctor();
@@ -90,6 +89,7 @@ public class HospitalTest extends TestCase {
 			testDoctor.assignPatient(new Patient());
 			assertTrue(false);
 		} catch (DoctorFullException dfe) {
+			System.out.println("Only 3 shall pass");
 			assertTrue(true);
 		}
 assertTrue(testDoctor.getPatients().size() == 3);
@@ -97,13 +97,25 @@ assertTrue(testDoctor.getPatients().size() == 3);
 
 	public void test8Patients() throws Exception {
 		// TODO: add 3 doctors to hospital
-
+		Hospital hos = new Hospital();
+		hos.addDoctor(new Doctor());
+		hos.addDoctor(new Doctor());
+		hos.addDoctor(new Doctor());
+		System.out.println(hos.getDoctors().size());
 		// TODO: add 8 patients to hospital
-
+		hos.addPatient(new Patient());
+		hos.addPatient(new Patient());
+		hos.addPatient(new Patient());
+		hos.addPatient(new Patient());
+		hos.addPatient(new Patient());
+		hos.addPatient(new Patient());
+		hos.addPatient(new Patient());
+		hos.addPatient(new Patient());
+		System.out.println(hos.getPatients().size());
 		// hospital assigns patients to doctors
-		testHospital.assignPatientsToDoctors();
+		hos.assignPatientsToDoctors();
 		// hospital.getDoctors shows doctors have 3, 3, 2 patients
-		List<Doctor> testDoctors = testHospital.getDoctors();
+		List<Doctor> testDoctors = hos.getDoctors();
 		assertEquals(3, testDoctors.get(0).getPatients().size());
 		assertEquals(3, testDoctors.get(1).getPatients().size());
 		assertEquals(2, testDoctors.get(2).getPatients().size());

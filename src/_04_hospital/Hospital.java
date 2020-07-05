@@ -8,7 +8,6 @@ ArrayList <Doctor> totalDocs = new ArrayList <Doctor>();
 ArrayList <Patient> totalPats = new ArrayList <Patient>();
 	public void addDoctor(Doctor input) {
 		totalDocs.add(input);
-		
 	}
 
 	public List<Doctor> getDoctors() {
@@ -24,4 +23,16 @@ ArrayList <Patient> totalPats = new ArrayList <Patient>();
 		return totalPats;
 	}
 
+	public void assignPatientsToDoctors() throws DoctorFullException {
+		int doctorsfull=0;
+		for(int i = 0; i<totalPats.size();i++) {
+			System.out.println(doctorsfull);
+			totalDocs.get(doctorsfull).assignPatient(totalPats.get(i));
+			if(totalDocs.get(doctorsfull).getPatients().size()==3) {
+				doctorsfull++;
+				System.out.println(doctorsfull);
+			}
+		}
+
+	}
 }
